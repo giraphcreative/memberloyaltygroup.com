@@ -35,6 +35,9 @@
 	}
 }
 
+.content-two-column .three-quarter {
+	@extend .content-style;
+}
 
 .fluid-width-video-wrapper {
 	margin: 15px 0;
