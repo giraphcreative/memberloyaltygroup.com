@@ -5,6 +5,9 @@ Home/catch-all template
 
 get_header(); ?>
 
+	<div class="large-title wrap">
+		<h1>Our Blog</h1>
+	</div>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
