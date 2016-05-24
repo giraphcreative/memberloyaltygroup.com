@@ -19,7 +19,7 @@ get_header();
 		?>
 		</div>
 		<div class="quarter sidebar">
-		<?php if ( !has_cmb_value( 'left_content' ) ) { ?>
+			<?php if ( !has_cmb_value( 'left_content' ) ) { ?>
 			<p><a href="/tour"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-tour.png"></a></p>
 			<p><a href="/blog"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-blog.png"></a></p>
 			<div class="sidebar-posts">
@@ -29,20 +29,20 @@ get_header();
 			if ($my_query->have_posts()) : 
 				while ($my_query->have_posts()) : $my_query->the_post(); 
 					?>
-			<div class="post">
-				<a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?>
-				<div class="post-title"><?php the_title(); ?></div>
-				<div class="quiet">read more &gt;</div></a>
-			</div>
+				<div class="post">
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?>
+					<div class="post-title"><?php the_title(); ?></div>
+					<div class="quiet">read more &gt;</div></a>
+				</div>
 					<?php 
 				endwhile;
 			endif; //end of loop 
 			wp_reset_postdata();
 			?>
 			</div>
-		<?php } else { ?>
+			<?php } else { ?>
 			<?php show_cmb_wysiwyg_value( 'left_content' ) ?>
-		<?php } ?>
+			<?php } ?>
 		</div>
 	</div><!-- #content -->
 

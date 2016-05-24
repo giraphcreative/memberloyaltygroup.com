@@ -8,9 +8,11 @@
 
 	&.has-showcase {		
 		top: -20px;
+		margin-bottom: -20px;
 
 		@include respond-to( 768px ) {
 			top: -40px;
+			margin-bottom: -40px;
 		}
 	}
 	
