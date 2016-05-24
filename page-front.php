@@ -20,13 +20,16 @@ get_header();
 		<div class="post quarter">
 			<p class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
 			<?php the_post_thumbnail() ?>
-			<p><?php the_excerpt(); ?></p>
+			<p><?php the_excerpt(); ?> <a href="<?php the_permalink() ?>">read more ></a></p>
 		</div>
 				<?php 
 			endwhile;
 		endif; //end of loop 
 		wp_reset_postdata();
 		?>
+		<div class="clear text-center">
+			<a href="/blog"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-more-posts.png"></a>
+		</div>
 	</div>
 
 	<div class="wrap content-wide home">
