@@ -1,0 +1,177 @@
+
+
+$menu-bp: 768px;
+
+header {
+	padding-top: 30px;
+	@include clearfix;
+	border-bottom: 14px solid $green;
+	position: relative;
+
+	.logo {
+		margin-right: 60px;
+		padding: 0 0 10px 20px;
+		max-width: 450px;
+
+		@include respond-to( 768px ) {
+			padding-left: 40px;
+		}
+	}
+
+	nav.aux-menu {
+		li {
+			a {
+				display: block;
+				padding: 15px 15px;
+				background: $teal;
+				color: white;
+				text-transform: uppercase;
+			}
+
+			&:first-child a {
+				background: $green;
+			}
+
+			@include respond-to( $menu-bp ) {
+				display: inline;
+
+				a {
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+
+		@include respond-to( $menu-bp ) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	nav.main-menu {
+		@include clearfix;
+		position: relative;
+
+		@include respond-to( $menu-bp ) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		button {
+			position: absolute;
+			right: 5px;
+			top: -80px;
+			width: 40px;
+			height: 40px;
+			border: 0;
+			padding: 0;
+			background: white;
+			color: black;
+			background: url(../img/icon-menu.png) center center no-repeat;
+
+			@include respond-to( $menu-bp ) {
+				display: none;
+			}
+		}
+
+		ul.nav-menu {
+			display: none;
+			background: $grey;
+			border: 0;
+			border-top-left-radius: 10px;
+			position: relative;
+			z-index: 1000;
+			
+			@include respond-to( $menu-bp ) {
+				display: block;
+				@include clearfix;
+				padding-left: 10px;
+			}
+
+			li {
+				@include respond-to( $menu-bp ) {
+					box-shadow: none;
+					position: relative;
+					display: inline-block;
+				}
+
+				a {
+					display: block;
+					@include font;
+					padding: 10px 5px;
+					font-size: 16px;
+					line-height: 16px;
+					color: white;
+					text-align: center;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					@include respond-to( $menu-bp ) {
+						display: inline-block;
+						padding: 10px 8px;
+					}
+				}
+
+				&:hover, &.open {
+					a {
+						background: $teal;
+					}
+
+					ul.sub-menu {
+						@include respond-to( $menu-bp ) {
+							display: block;
+						}
+					}
+				}
+
+
+				ul.sub-menu {
+					display: none;
+					margin-bottom: 3px;
+
+					@include respond-to( $menu-bp ) {
+						position: absolute;
+						right: 0;
+						top: 36px;
+						width: 230px;
+						background: $teal;
+						@include clearfix;
+						text-align: left;
+					}
+
+					li {
+						box-shadow: inset 0px 5px 12px -10px rgba(100, 100, 100, 0.69);
+						display: block;
+
+						a {
+							padding: 7px 5px;
+							font-size: .9em;
+							display: block;
+
+							@include respond-to( $menu-bp ) {
+								text-align: left;
+								padding: 8px 12px;
+
+								&:hover {
+									background: lighten( $teal, 2% );
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	@include respond-to( 768px ) {
+		position: relative;
+
+		.wrap {
+			position: relative;
+		}
+	}
+}
+
