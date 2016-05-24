@@ -5,10 +5,13 @@
 	border-bottom: 4px solid $teal;
 	text-align: center;
 	position: relative;
-	top: -20px;
 
-	@include respond-to( 768px ) {
-		top: -40px;
+	&.has-showcase {		
+		top: -20px;
+
+		@include respond-to( 768px ) {
+			top: -40px;
+		}
 	}
 	
 	h1 {
