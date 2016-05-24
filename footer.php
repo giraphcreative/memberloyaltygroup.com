@@ -37,8 +37,8 @@
 				</nav>
 			</div>
 			<div class="column social">
-				<a href="https://twitter.com/NWCUF" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-twitter.png"></a>
-				<a href="https://www.linkedin.com/company/1726440" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-linkedin.png"></a>
+				<a href="https://twitter.com/memberloyalty" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-twitter.png"></a>
+				<a href="https://www.linkedin.com/company/2536053?trk=tyah" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-linkedin.png"></a>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
