@@ -48,6 +48,10 @@
 @include respond-to( 768px ) {
 	.quarter, .third, .half, .two-third, .three-quarter {
 		float: left;
+
+		&.right {
+			float: right;
+		}
 	}
 
 	.quarter {

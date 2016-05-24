@@ -13,5 +13,22 @@
 			font-style: normal;
 		}
 	}
+
+	.sidebar-posts{
+		.post {
+			padding: 10px 0;
+			@include clearfix;
+
+			.post-title {
+				color: $teal;
+			}
+
+			img {
+				width: 20%;
+				margin: 0 5px 10px 0;
+				float: left;
+			}
+		}
+	}
 }
 

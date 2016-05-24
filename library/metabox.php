@@ -29,7 +29,7 @@ function page_metaboxes( $meta_boxes ) {
     $title_metabox->add_field( array(
         'name' => 'Subtitle',
         'id'   => CMB_PREFIX . 'large-title-subtitle',
-        'type' => 'text',
+        'type' => 'textarea',
     ) );
 
 

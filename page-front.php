@@ -25,6 +25,7 @@ get_header();
 				<?php 
 			endwhile;
 		endif; //end of loop 
+		wp_reset_postdata();
 		?>
 	</div>
 

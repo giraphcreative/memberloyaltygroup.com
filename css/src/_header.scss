@@ -18,26 +18,54 @@ header {
 		}
 	}
 
-	nav.aux-menu {
-		li {
-			a {
-				display: block;
-				padding: 15px 15px;
-				background: $teal;
-				color: white;
-				text-transform: uppercase;
-			}
+	button.menu-toggle {
+		position: absolute;
+		right: 5px;
+		top: 35px;
+		width: 40px;
+		height: 40px;
+		border: 0;
+		padding: 0;
+		background: white;
+		color: black;
+		background: url(../img/icon-menu.png) center center no-repeat;
 
-			&:first-child a {
-				background: $green;
-			}
+		@include respond-to( $menu-bp ) {
+			display: none;
+		}
+	}
+
+	nav.aux-menu {
+		ul {
+			display: none;
 
 			@include respond-to( $menu-bp ) {
-				display: inline;
+				display: block;
+			}
 
+			li {
 				a {
-					display: inline-block;
-					margin-right: 10px;
+					display: block;
+					padding: 10px 15px;
+					background: $teal;
+					color: white;
+					text-transform: uppercase;
+					text-align: center;
+					text-decoration: none;
+				}
+
+				&:first-child a {
+					background: $green;
+				}
+
+				@include respond-to( $menu-bp ) {
+					display: inline;
+
+					a {
+						display: inline-block;
+						margin-right: 10px;
+						padding: 15px 15px;
+					}
 				}
 			}
 		}
@@ -59,28 +87,10 @@ header {
 			right: 0;
 		}
 
-		button {
-			position: absolute;
-			right: 5px;
-			top: -80px;
-			width: 40px;
-			height: 40px;
-			border: 0;
-			padding: 0;
-			background: white;
-			color: black;
-			background: url(../img/icon-menu.png) center center no-repeat;
-
-			@include respond-to( $menu-bp ) {
-				display: none;
-			}
-		}
-
 		ul.nav-menu {
 			display: none;
 			background: $grey;
 			border: 0;
-			border-top-left-radius: 10px;
 			position: relative;
 			z-index: 1000;
 			
@@ -88,6 +98,7 @@ header {
 				display: block;
 				@include clearfix;
 				padding-left: 10px;
+				border-top-left-radius: 10px;
 			}
 
 			li {
@@ -116,7 +127,7 @@ header {
 
 				&:hover, &.open {
 					a {
-						background: $teal;
+						background: lighten( $grey, 5% );
 					}
 
 					ul.sub-menu {

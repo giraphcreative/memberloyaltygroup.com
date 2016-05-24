@@ -5,9 +5,9 @@ jQuery(document).ready(function($){
 
 	// select some things we'll use to make things responsive
 	var menu = $( 'header nav' ),
-		menu_toggle = menu.find( 'button.menu-toggle' ),
+		menu_toggle = $( 'button.menu-toggle' ),
 		menu_ul = menu.find( '.nav-menu' ),
-		fluid_images = $( '.content-area img, .site-content img, .content-wide img' );
+		fluid_images = $( '.content-area img, .site-content img, .content-wide img, .sidebar img' );
 
 
 	// remove height and width from images inside

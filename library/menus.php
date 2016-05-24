@@ -10,8 +10,8 @@ register_nav_menus( array(
 
 if ( function_exists('register_sidebar') ) {
  	register_sidebar(array(
-		'name'=> 'General Sidebar',
-		'id' => 'sidebar-generic',
+		'name'=> 'Sidebar',
+		'id' => 'sidebar',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
