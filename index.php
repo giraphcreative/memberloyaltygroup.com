@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-			<div class="content-narrow">
+			<div class="content-extra-narrow">
 			<?php
 			if ( is_search() ) {
 				?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
@@ -20,9 +20,14 @@ get_header(); ?>
 
 			while ( have_posts() ) : the_post();
 				?>
-				<hr>
-				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
+				<div class="post">
+					<?php the_post_thumbnail() ?>
+					<div class="post-content">
+						<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+						<?php the_excerpt(); ?>
+						<p><a href="<?php the_permalink() ?>">read more ></a></p>
+					</div>
+				</div>
 				<?php
 			endwhile;
 			?>
