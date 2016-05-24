@@ -17,6 +17,8 @@ get_header();
 			endwhile;
 		endif;
 		?>
+
+		<?php the_bubbles() ?>
 		</div>
 		<div class="quarter sidebar">
 			<?php if ( !has_cmb_value( 'left_content' ) ) { ?>

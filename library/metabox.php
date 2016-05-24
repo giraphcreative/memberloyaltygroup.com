@@ -87,10 +87,62 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // showcase metabox
+    $bubble_metabox = new_cmb2_box( array(
+        'id' => 'bubble_metabox',
+        'title' => 'Info Bubbles',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( '' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $bubble_metabox_group = $bubble_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'bubble',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Bubble', 'cmb2'),
+            'remove_button' => __('Remove Bubble', 'cmb2'),
+            'group_title'   => __( 'Bubble {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $bubble_metabox->add_group_field( $bubble_metabox_group, array(
+        'name' => 'Image',
+        'description' => 'Upload a square image and it will show up as a circle on the front end.',
+        'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 200, 100 )
+    ) );
+
+    $bubble_metabox->add_group_field( $bubble_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $bubble_metabox->add_group_field( $bubble_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $bubble_metabox->add_group_field( $bubble_metabox_group, array(
+        'name' => 'Link',
+        'id'   => 'link',
+        'type' => 'text',
+    ) );
+
+
+
+    // showcase metabox
     $left_metabox = new_cmb2_box( array(
         'id' => 'left_metabox',
         'title' => 'Left Column',
-        'object_types' => array( 'page', 'product' ), // post type
+        'object_types' => array( 'page' ), // post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => false, // Show field names on the left

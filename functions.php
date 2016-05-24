@@ -29,6 +29,7 @@ include( "library/metabox.php" );
 // include quote metaboxes/functions
 include( "library/title.php" );
 include( "library/showcase.php" );
+include( "library/bubble.php" );
 include( "library/accordion.php" );
 
 

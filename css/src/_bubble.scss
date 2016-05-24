@@ -1,0 +1,41 @@
+
+
+.bubbles {
+	padding: 20px;
+	text-align: center;
+	position: relative;
+
+	.bubble {
+		@include respond-to( 600px ) {
+			width: 48%;
+			float: left;
+			margin-right: 4%;
+
+			&:nth-child( 1 ), &:nth-child( 3 ), &:nth-child( 5 ), &:nth-child( 7 ), &:nth-child( 9 ), &:nth-child( 11 ) {
+				clear: left;
+			}
+
+			&:nth-child( 2 ), &:nth-child( 4 ), &:nth-child( 6 ), &:nth-child( 8 ), &:nth-child( 10 ), &:nth-child( 12 ) {
+				margin-right: 0;
+			}
+		}
+			
+		img {
+			max-width: 100px;
+			border-radius: 50%;
+		}
+
+		.bubble-title {
+			text-transform: uppercase;
+			color: $teal;
+			text-align: center
+		}
+
+		p {
+			color: $grey;
+			text-align: left;
+		}
+	}
+	
+}
+
