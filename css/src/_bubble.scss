@@ -1,11 +1,12 @@
 
 
 .bubbles {
-	padding: 20px;
 	text-align: center;
 	position: relative;
 
 	.bubble {
+		padding: 20px 0;
+
 		@include respond-to( 600px ) {
 			width: 48%;
 			float: left;
