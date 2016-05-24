@@ -23,6 +23,22 @@
 	max-width: 600px;
 	margin: 0 auto;
 	@extend .content-style;
+
+	.post {
+		@include clearfix;
+		padding: 15px 0;
+
+		img {
+			width: 15%;
+			float: left;
+			margin: 0 3% 10px 0;
+		}
+
+		.post-content {
+			width: 82%;
+			float: left;
+		}
+	}
 }
 
 .content-wide {
@@ -108,18 +124,3 @@ table {
 	}
 }
 
-.post {
-	@include clearfix;
-	padding: 15px 0;
-
-	img {
-		width: 15%;
-		float: left;
-		margin: 0 3% 10px 0;
-	}
-
-	.post-content {
-		width: 82%;
-		float: left;
-	}
-}
