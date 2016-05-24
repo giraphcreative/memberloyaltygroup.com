@@ -16,8 +16,8 @@
 		<div class="wrap">
 			<div class="column wide">
 				<h3>MEMBER LOYALTY GROUP</h3>
-				<p>(773) 252-4901<br>
-				info@memberloyaltygroup.com</p>
+				<p><a href="tel:17732524901">(773) 252-4901</a><br>
+				<a href="mailto:info@memberloyaltygroup.com">info@memberloyaltygroup.com</a></p>
 				<p>Copyright 2016. Member Loyalty Group</p>
 			</div>
 			<div class="column">
