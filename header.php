@@ -29,6 +29,10 @@
 		</a>
 	</div>
 	
+	<div class="contact">
+		Contact Us Today <a href="tel:17732524901">(773)252-4901</a> or <a href="mailto:info@memberloyaltygroup.com">Email Us</a>
+	</div>
+
 	<nav class="aux-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'aux-menu', 'menu_class' => 'nav-menu' ) ); ?>
 	</nav>
