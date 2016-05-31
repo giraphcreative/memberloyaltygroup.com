@@ -22,7 +22,7 @@ get_header();
 		</div>
 		<div class="quarter sidebar">
 			<?php if ( !has_cmb_value( 'left_content' ) ) { ?>
-			<p><a href="/tour"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-tour.png"></a></p>
+			<p><a href="http://memberloyaltygroup.hs-sites.com/see-our-program-firsthand?__hssc=34972414.3.1464702047606&__hstc=34972414.d75c55d67035020538110b8a51628157.1432070127206.1463595566613.1464702047606.52&__hsfp=2207488183&hsCtaTracking=417f601b-172e-460b-9d80-7c4b77b2382b%7C3a02499d-7ff4-4fa6-bcb6-6f761903da1c"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-tour.png"></a></p>
 			<p><a href="/blog"><img src="<?php bloginfo( 'template_url' ) ?>/img/button-blog.png"></a></p>
 			<div class="sidebar-posts">
 			<?php 
