@@ -16,21 +16,6 @@
 	max-width: 900px;
 	margin: 0 auto;
 	@extend .content-style;
-
-	.post {
-		padding: 15px 0;
-
-		img {
-			width: 15%;
-			float: left;
-			margin: 0 3% 10px 0;
-		}
-
-		.post-content {
-			width: 82%;
-			float: left;
-		}
-	}
 }
 
 .content-extra-narrow {

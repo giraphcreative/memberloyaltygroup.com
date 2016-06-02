@@ -3,7 +3,18 @@
 .blog-list {
 	
 	.post {
+		padding: 15px 0;
 
+		img {
+			width: 15%;
+			float: left;
+			margin: 0 3% 10px 0;
+		}
+
+		.post-content {
+			width: 82%;
+			float: left;
+		}
 	}
 
 	@include respond-to( 768px ) {
@@ -22,5 +33,32 @@
 		}
 	}
 
+}
+
+
+.pagination {
+	padding: 15px 0 30px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 15px;
+	@include font-bold;
+
+	a {
+		padding: 7px 12px;
+		background: $grey;
+		color: white;
+		text-decoration: none;
+		display: inline-block;
+
+		&:hover {
+			background: lighten( $grey, 5% );
+		}
+	}
+
+	.current {
+		padding: 7px 12px;
+		display: inline-block;
+		background: lighten( $grey, 5% );
+	}
 }
 
