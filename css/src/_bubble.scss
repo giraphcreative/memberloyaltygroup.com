@@ -6,23 +6,26 @@
 
 	.bubble {
 		padding: 20px 0;
-		position: relative;
-		height: 260px;
-		padding-bottom: 30px;
-		overflow: hidden;
 
-		&:after {
-			content: "";
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			height: 30px;
-			background: url(../img/bg-gradient-white-transparent.png) bottom center repeat-x;
-		}
+		@include respond-to( 1025px ) {
+			position: relative;
+			height: 260px;
+			padding-bottom: 30px;
+			overflow: hidden;
 
-		&:hover {
-			height: auto;
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 30px;
+				background: url(../img/bg-gradient-white-transparent.png) bottom center repeat-x;
+			}
+
+			&:hover {
+				height: auto;
+			}
 		}
 
 		a.read-more {
