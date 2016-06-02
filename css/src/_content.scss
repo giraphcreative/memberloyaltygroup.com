@@ -16,16 +16,8 @@
 	max-width: 900px;
 	margin: 0 auto;
 	@extend .content-style;
-}
-
-.content-extra-narrow {
-	padding: 40px 20px;
-	max-width: 600px;
-	margin: 0 auto;
-	@extend .content-style;
 
 	.post {
-		@include clearfix;
 		padding: 15px 0;
 
 		img {
@@ -39,6 +31,13 @@
 			float: left;
 		}
 	}
+}
+
+.content-extra-narrow {
+	padding: 40px 20px;
+	max-width: 600px;
+	margin: 0 auto;
+	@extend .content-style;
 }
 
 .content-wide {

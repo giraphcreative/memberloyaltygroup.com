@@ -10,9 +10,8 @@ get_header(); ?>
 	</div>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-			<div class="content-extra-narrow blog-list">
+			<div class="content-narrow blog-list">
 			<?php
 			if ( is_search() ) {
 				?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
@@ -37,7 +36,6 @@ get_header(); ?>
 				<?php pagination(); ?>
 			</div>
 
-		</div><!-- #content -->
 	</div><!-- #primary -->
 
 

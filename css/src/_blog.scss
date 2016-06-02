@@ -1,0 +1,26 @@
+
+
+.blog-list {
+	
+	.post {
+
+	}
+
+	@include respond-to( 768px ) {
+		.post {
+			width: 48%;
+			float: left;
+			margin-right: 4%;
+
+			&:nth-child( 2 ), &:nth-child( 4 ), &:nth-child( 6 ), &:nth-child( 8 ), &:nth-child( 10 ), {
+				margin-right: 0;
+			}
+
+			&:nth-child( 1 ), &:nth-child( 3 ), &:nth-child( 5 ), &:nth-child( 7 ), &:nth-child( 9 ), {
+				clear: left;
+			}
+		}
+	}
+
+}
+
