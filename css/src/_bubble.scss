@@ -6,6 +6,32 @@
 
 	.bubble {
 		padding: 20px 0;
+		position: relative;
+		height: 260px;
+		padding-bottom: 30px;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 30px;
+			background: url(../img/bg-gradient-white-transparent.png) bottom center repeat-x;
+		}
+
+		&:hover {
+			height: auto;
+		}
+
+		a.read-more {
+			position: absolute;
+			font-size: .9em;
+			right: 5px;
+			bottom: 5px;
+			color: $teal;
+		}
 
 		@include respond-to( 600px ) {
 			width: 48%;
@@ -22,7 +48,7 @@
 		}
 			
 		img {
-			max-width: 100px;
+			max-width: 140px;
 			border-radius: 50%;
 		}
 
@@ -35,6 +61,7 @@
 		p {
 			color: $grey;
 			text-align: left;
+			font-size: .9em;
 		}
 	}
 	
