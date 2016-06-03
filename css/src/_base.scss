@@ -6,6 +6,7 @@ body {
 	font-size: 15px;
 	line-height: 22px;
 	color: $grey-dark;
+	background: lighten( $grey, 30% );
 }
 
 h1, h2, h3, h4, h5, h6 {

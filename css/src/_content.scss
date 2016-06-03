@@ -5,7 +5,17 @@
 	margin: 0 auto;
 }
 
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	box-shadow: 0 0 20px lighten( $grey, 20% );
+}
+
+
 .content {
+	background: white;
+
 	h1, h2, h3, h4, h5, h6 {
 		padding: 6px 0;
 	}
