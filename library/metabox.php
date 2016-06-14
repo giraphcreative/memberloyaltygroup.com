@@ -212,5 +212,15 @@ function cmb2_metabox_show_on_template( $display, $meta_box ) {
 add_filter( 'cmb2_show_on', 'cmb2_metabox_show_on_template', 10, 2 );
 
 
+// allow code in text fields by switching double squigly brackets
+function cmb2_sanitize_text_callback( $override_value, $value ) {
+    //convert square brackets to angle brackets
+    $value = str_replace('{{', '<', $value);
+    $value = str_replace('}}', '>', $value);
+    return $value;
+}
+add_filter( 'cmb2_sanitize_text', 'cmb2_sanitize_text_callback', 10, 2 );
+
+
 
 ?>
