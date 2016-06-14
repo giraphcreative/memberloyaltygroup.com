@@ -89,6 +89,7 @@ jQuery(document).ready(function($){
 			var showcase_height = function(){
 				var current_slide = get_current_slide(),
 					current_slide_img = current_slide.find( 'img' );
+				/*
 				if ( showcase.find( '.slide-wrapper' ).length ) {
 					var slide_wrapper_margin = showcase.find( '.slide-wrapper' ).css( 'margin-top' ).replace( 'px', '' ) * 2;
 				} else {
@@ -99,19 +100,25 @@ jQuery(document).ready(function($){
 				} else {
 					showcase.height( current_slide.height() );
 				}
+				*/
+				var slide_dimensions = current_slide_img.data( 'size' ).split( 'x' );
+				var slide_height = showcase.width() / ( slide_dimensions[0] / slide_dimensions[1] );
+				showcase.height( slide_height )
+				console.log( slide_height );
 			};
 
 
 			// set showcase initial height when the first image is loaded.
+			showcase_height();
+			/*
 			setTimeout( function() {
-				showcase_height();
 
 				// once we're loaded up, set a timer to auto-rotate the slides.
 				if ( slide_count > 1 ) {
 					auto_rotate = setInterval( next_slide, 10000 );
 				}
 			}, 500 );
-
+			*/
 			
 
 			// update the showcase height on resize
