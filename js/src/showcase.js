@@ -102,9 +102,8 @@ jQuery(document).ready(function($){
 				}
 				*/
 				var slide_dimensions = current_slide_img.data( 'size' ).split( 'x' );
-				var slide_height = showcase.width() / ( slide_dimensions[0] / slide_dimensions[1] );
+				var slide_height = Math.floor( showcase.width() / ( slide_dimensions[0] / slide_dimensions[1] ) );
 				showcase.height( slide_height )
-				console.log( slide_height );
 			};
 
 
