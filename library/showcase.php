@@ -22,6 +22,9 @@ function the_showcase() {
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
 					// it's an image, so resize it and generate an img tag.
+					if ( !stristr( $slide['image'], 'http' ) ) {
+						$slide['image'] = ( isset( $_SERVER['HTTPS'] ) ? 'https:' : 'http:' ) . '//' . $_SERVER['HTTP_HOST'] . $slide['image'];
+					}
 					list( $width, $height) = getimagesize ( $slide['image'] );
 					$image = '<img src="' . $slide["image"] . '" data-size="' . $width . "x" . $height . '">';
 				} else {
