@@ -52,6 +52,31 @@
 	}
 }
 
+.content {
+	.hs-form-field {
+		padding: 8px 0;
+
+		input[type=text], input[type=tel], input[type=number], input[type=email] {
+			min-width: 50%;
+			max-width: 100%;
+			padding: 5px 9px;
+		}
+
+		textarea {
+			width: 100%;
+			height: 150px;
+			padding: 5px 9px;
+		}
+	}
+
+	input[type=submit] {
+		padding: 6px 10px;
+		background: $teal;
+		color: white;
+		border: 0;
+	}
+}
+
 .content-two-column .three-quarter {
 	@extend .content-style;
 }
